@@ -20,10 +20,11 @@ class Autor(models.Model):
         return self.nome
 
     class Meta:
+        verbose_name = "Autor"
         verbose_name_plural = "Autores"
 
 class Livro(models.Model):
-    titulo = models.CharField(max_length=25)
+    titulo = models.CharField(max_length=255)
     isbn = models.CharField(max_length=32, null=True, blank=True)
     quantidade = models.IntegerField(default=0, null=True, blank=True)
     preco = models.DecimalField(
